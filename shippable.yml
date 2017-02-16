@@ -13,6 +13,7 @@ build:
   ci:
    - mvn clean cobertura:cobertura
    - mvn test && "echo test"
+   - echo "Aidan is cool"
 
 notifications:
   email: false

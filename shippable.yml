@@ -2,12 +2,19 @@ language: java
 
 jdk:
    - oraclejdk7
-   - openjdk6
-   - openjdk7
 
-after_success:
+services:
+  - mysql
+
+build:
+  pre_ci_boot:
+    image_name: drydock/u14jav
+    image_tag: prod
+  ci:
    - mvn clean cobertura:cobertura
-   - mvn test
+   - mvn test && "echo test"
+   - echo "Aidan is cool"
+
 notifications:
   email: false
 

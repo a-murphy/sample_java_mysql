@@ -12,8 +12,9 @@ build:
     image_tag: prod
   ci:
    - mvn clean cobertura:cobertura
-   - mvn test && "echo test"
+ #  - mvn test && "echo test"
    - echo "Aidan is cool"
+   - echo "What's a pirate's favorite letter? --- The C!!!"
 
 notifications:
   email: false

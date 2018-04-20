@@ -17,8 +17,5 @@ integrations:
   notifications:
     - integrationName: email
       type: email
-      recipients:
-        - aidan.shippable@outlook.com
-        - aidan@shippable.com
       on_success: always
       sendFailingSnippet: true

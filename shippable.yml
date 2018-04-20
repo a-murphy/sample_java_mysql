@@ -12,6 +12,13 @@ build:
   on_success:
    - mvn clean cobertura:cobertura
    - mvn test
-notifications:
-  email: false
 
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - aidan.shippable@outlook.com
+        - aidan@shippable.com
+      on_success: always
+      sendFailingSnippet: true

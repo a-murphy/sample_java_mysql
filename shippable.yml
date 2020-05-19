@@ -9,6 +9,8 @@ build:
   pre_ci_boot:
     image_name: drydock/u16javall
     image_tag: master
+  ci:
+   - docker pull docker.io/pulp/pulp-fedora31:latest
   on_success:
    - mvn clean cobertura:cobertura
    - mvn test
